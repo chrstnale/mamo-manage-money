@@ -1,5 +1,6 @@
 # Mamo: Manage Money
-Mamo: App to Manage Money. Developed for Junior Project DTETI
+Mamo: Manage Money. Mamo mencatat arus kas dan anggaran agar user dapat mengetahui pengeluaran keuangan ke mana saja. Mamo dapat memberi analisis dan statistik pengeluaran user ke mana saja, seperti shopping, makanan, transportasi, dll. 
+Developed for Junior Project DTETI
 
 Mamoo
 * Ketua Kelompok: Christian Ale Perdana - 20/463596/TK/51588
