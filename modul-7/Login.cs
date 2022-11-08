@@ -17,11 +17,15 @@ namespace modul_7
         public Login()
         {
             InitializeComponent();
+            lblWelcome1.Parent = pb1;
+            lblWelcome2.Parent = pb1;
+            lblWelcome1.BackColor = Color.Transparent;
+            lblWelcome2.BackColor = Color.Transparent;
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -42,6 +46,21 @@ namespace modul_7
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+
+        }
+
+        private void lblInstruction_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPassword_Click(object sender, EventArgs e)
+        {
 
         }
     }
