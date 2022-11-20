@@ -12,6 +12,7 @@ namespace Front_End
 {
     public partial class Register : Form
     {
+        //Login login = new Login();
         public Register()
         {
             InitializeComponent();
