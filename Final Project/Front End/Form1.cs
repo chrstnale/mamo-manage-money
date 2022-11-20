@@ -53,7 +53,12 @@ namespace Front_End
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-
+            if (btnHome.Focused == true)
+            {
+                btnHome.BackColor = Color.DarkGreen;
+                btnTransaksi.BackColor = panel1.BackColor;
+                btnAnggaran.BackColor = panel1.BackColor;
+            }
         }
     }
 }

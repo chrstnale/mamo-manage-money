@@ -29,11 +29,9 @@ namespace Front_End
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAnggaran = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblLogout = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -44,7 +42,6 @@ namespace Front_End
             this.form_Transaksi1 = new Front_End.Form_Transaksi();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +50,6 @@ namespace Front_End
             // 
             this.panel1.BackColor = System.Drawing.Color.ForestGreen;
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblLogout);
             this.panel1.Controls.Add(this.lblUsername);
             this.panel1.Controls.Add(this.panel4);
@@ -79,7 +75,6 @@ namespace Front_End
             this.btnAnggaran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnggaran.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAnggaran.ForeColor = System.Drawing.Color.White;
-            this.btnAnggaran.Image = ((System.Drawing.Image)(resources.GetObject("btnAnggaran.Image")));
             this.btnAnggaran.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAnggaran.Location = new System.Drawing.Point(-9, -10);
             this.btnAnggaran.Name = "btnAnggaran";
@@ -89,16 +84,6 @@ namespace Front_End
             this.btnAnggaran.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAnggaran.UseVisualStyleBackColor = false;
             this.btnAnggaran.Click += new System.EventHandler(this.btnAnggaran_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 18);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 33);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblLogout
             // 
@@ -137,7 +122,6 @@ namespace Front_End
             this.btnTransaksi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransaksi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnTransaksi.ForeColor = System.Drawing.Color.White;
-            this.btnTransaksi.Image = ((System.Drawing.Image)(resources.GetObject("btnTransaksi.Image")));
             this.btnTransaksi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTransaksi.Location = new System.Drawing.Point(-9, -13);
             this.btnTransaksi.Name = "btnTransaksi";
@@ -163,7 +147,6 @@ namespace Front_End
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.Location = new System.Drawing.Point(-9, -11);
             this.btnHome.Name = "btnHome";
@@ -206,7 +189,6 @@ namespace Front_End
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -216,7 +198,6 @@ namespace Front_End
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblLogout;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Panel panel4;
