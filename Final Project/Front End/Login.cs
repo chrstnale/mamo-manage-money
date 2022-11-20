@@ -12,6 +12,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using Npgsql;
+using static System.Windows.Forms.DataFormats;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Front_End
 {
@@ -258,6 +261,30 @@ namespace Front_End
             // Starts the code exchange at the Token Endpoint.
             performCodeExchange(code, code_verifier, redirectURI);
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            bool blnfound = false;
+
+            NpgsqlConnection con = new NpgsqlConnection("Host=localhost;Port=4321;Username=postgres;Password=A15p12D15;Database=mamodb;");
+            con.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("Select * from tb_user where email = '" + tbEmail.Text + "' and password = '" + tbPassword.Text + "'", con);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                blnfound = true;
+                Form1 fr = new Form1();
+                fr.Show();
+                this.Hide();
+            }
+
+            if (blnfound == false)
+            {
+                MessageBox.Show("Ups! Email atau password tidak benar", "Email atau password tidak tepat!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            dr.Close();
+            con.Close();
         }
     }
 }
