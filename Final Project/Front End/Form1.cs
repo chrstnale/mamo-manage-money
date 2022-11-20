@@ -33,7 +33,8 @@ namespace Front_End
             form_Anggaran1.Visible = false;
             if (btnTransaksi.Focused == true)
             {
-                btnTransaksi.BackColor = Color.ForestGreen;
+                btnTransaksi.BackColor = Color.DarkGreen;
+                btnHome.BackColor = panel1.BackColor;
                 btnAnggaran.BackColor = panel1.BackColor;
             }
         }
@@ -44,9 +45,15 @@ namespace Front_End
             form_Anggaran1.Visible = true;
             if (btnAnggaran.Focused == true)
             {
-                btnAnggaran.BackColor = Color.ForestGreen;
+                btnAnggaran.BackColor = Color.DarkGreen;
+                btnHome.BackColor = panel1.BackColor;
                 btnTransaksi.BackColor = panel1.BackColor;
             }
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
