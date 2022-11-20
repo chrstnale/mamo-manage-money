@@ -26,5 +26,27 @@ namespace Front_End
         {
 
         }
+
+        private void btnTransaksi_Click(object sender, EventArgs e)
+        {
+            form_Transaksi1.Visible = true;
+            form_Anggaran1.Visible = false;
+            if (btnTransaksi.Focused == true)
+            {
+                btnTransaksi.BackColor = Color.ForestGreen;
+                btnAnggaran.BackColor = panel1.BackColor;
+            }
+        }
+
+        private void btnAnggaran_Click(object sender, EventArgs e)
+        {
+            form_Transaksi1.Visible = false;
+            form_Anggaran1.Visible = true;
+            if (btnAnggaran.Focused == true)
+            {
+                btnAnggaran.BackColor = Color.ForestGreen;
+                btnTransaksi.BackColor = panel1.BackColor;
+            }
+        }
     }
 }

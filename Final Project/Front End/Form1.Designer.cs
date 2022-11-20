@@ -38,6 +38,8 @@ namespace Front_End
             this.btnAnggaran = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnTransaksi = new System.Windows.Forms.Button();
+            this.form_Transaksi1 = new Front_End.Form_Transaksi();
+            this.form_Anggaran1 = new Front_End.Form_Anggaran();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -55,7 +57,7 @@ namespace Front_End
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(259, 633);
+            this.panel1.Size = new System.Drawing.Size(259, 684);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -93,9 +95,9 @@ namespace Front_End
             // panel4
             // 
             this.panel4.Controls.Add(this.btnAnggaran);
-            this.panel4.Location = new System.Drawing.Point(12, 155);
+            this.panel4.Location = new System.Drawing.Point(3, 155);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(247, 53);
+            this.panel4.Size = new System.Drawing.Size(256, 53);
             this.panel4.TabIndex = 3;
             // 
             // btnAnggaran
@@ -105,12 +107,13 @@ namespace Front_End
             this.btnAnggaran.ForeColor = System.Drawing.Color.White;
             this.btnAnggaran.Image = ((System.Drawing.Image)(resources.GetObject("btnAnggaran.Image")));
             this.btnAnggaran.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnggaran.Location = new System.Drawing.Point(-9, -7);
+            this.btnAnggaran.Location = new System.Drawing.Point(-11, -7);
             this.btnAnggaran.Name = "btnAnggaran";
-            this.btnAnggaran.Size = new System.Drawing.Size(274, 70);
+            this.btnAnggaran.Size = new System.Drawing.Size(283, 70);
             this.btnAnggaran.TabIndex = 3;
             this.btnAnggaran.Text = "Anggaran";
             this.btnAnggaran.UseVisualStyleBackColor = false;
+            this.btnAnggaran.Click += new System.EventHandler(this.btnAnggaran_Click);
             // 
             // panel3
             // 
@@ -127,20 +130,41 @@ namespace Front_End
             this.btnTransaksi.ForeColor = System.Drawing.Color.White;
             this.btnTransaksi.Image = ((System.Drawing.Image)(resources.GetObject("btnTransaksi.Image")));
             this.btnTransaksi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransaksi.Location = new System.Drawing.Point(-4, -15);
+            this.btnTransaksi.Location = new System.Drawing.Point(-8, -15);
             this.btnTransaksi.Name = "btnTransaksi";
-            this.btnTransaksi.Size = new System.Drawing.Size(276, 78);
+            this.btnTransaksi.Size = new System.Drawing.Size(280, 78);
             this.btnTransaksi.TabIndex = 2;
-            this.btnTransaksi.Text = "Transaksi";
+            this.btnTransaksi.Text = "    Transaksi";
             this.btnTransaksi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTransaksi.UseVisualStyleBackColor = false;
+            this.btnTransaksi.Click += new System.EventHandler(this.btnTransaksi_Click);
+            // 
+            // form_Transaksi1
+            // 
+            this.form_Transaksi1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.form_Transaksi1.Location = new System.Drawing.Point(259, 0);
+            this.form_Transaksi1.Name = "form_Transaksi1";
+            this.form_Transaksi1.Size = new System.Drawing.Size(1101, 684);
+            this.form_Transaksi1.TabIndex = 1;
+            this.form_Transaksi1.Visible = false;
+            // 
+            // form_Anggaran1
+            // 
+            this.form_Anggaran1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.form_Anggaran1.Location = new System.Drawing.Point(259, 0);
+            this.form_Anggaran1.Name = "form_Anggaran1";
+            this.form_Anggaran1.Size = new System.Drawing.Size(1101, 684);
+            this.form_Anggaran1.TabIndex = 2;
+            this.form_Anggaran1.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1230, 633);
+            this.ClientSize = new System.Drawing.Size(1360, 684);
+            this.Controls.Add(this.form_Anggaran1);
+            this.Controls.Add(this.form_Transaksi1);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Mamo - Manage Money";
@@ -163,6 +187,8 @@ namespace Front_End
         private System.Windows.Forms.Button btnAnggaran;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnTransaksi;
+        private Form_Transaksi form_Transaksi1;
+        private Form_Anggaran form_Anggaran1;
     }
 }
 
