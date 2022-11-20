@@ -12,7 +12,7 @@ namespace Front_End
 {
     public partial class Register : Form
     {
-        Login login = new Login();
+        //Login login = new Login();
         public Register()
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace Front_End
 
         private void btnKeRegister_Click(object sender, EventArgs e)
         {
-            login.Show();
+            this.Hide();
         }
     }
 }
