@@ -36,7 +36,7 @@ namespace Front_End
             try
             {
                 conn.Open();
-                sql = @"select * from transactions_insert(:_type,:_nominal,:_category,:_notes,:_date,:_source)";
+                sql = @"select * from transactions_insert(:_type,:_category,:_notes,:_source,:_nominal,:_date)";
                 cmd = new NpgsqlCommand(sql, conn);
                 if (rbPendapatan.Checked)
                     cmd.Parameters.AddWithValue("_type", "Pendapatan");

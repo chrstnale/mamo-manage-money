@@ -85,26 +85,17 @@ namespace Front_End
             // panel2
             // 
             this.panel2.Controls.Add(this.btnRefreshTrans);
-            this.panel2.Location = new System.Drawing.Point(178, 72);
+            this.panel2.Location = new System.Drawing.Point(173, 72);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(145, 42);
+            this.panel2.Size = new System.Drawing.Size(140, 42);
             this.panel2.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnRefreshTrans);
-            this.panel2.Location = new System.Drawing.Point(173, 86);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(129, 38);
-            this.panel2.TabIndex = 3;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnRefreshTrans
             // 
             this.btnRefreshTrans.BackColor = System.Drawing.Color.White;
             this.btnRefreshTrans.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnRefreshTrans.ForeColor = System.Drawing.Color.DimGray;
-            this.btnRefreshTrans.Location = new System.Drawing.Point(-15, -8);
+            this.btnRefreshTrans.Location = new System.Drawing.Point(-21, -11);
             this.btnRefreshTrans.Name = "btnRefreshTrans";
             this.btnRefreshTrans.Size = new System.Drawing.Size(176, 59);
             this.btnRefreshTrans.TabIndex = 5;
@@ -124,7 +115,7 @@ namespace Front_End
             this.Name = "Form_Transaksi";
             this.Size = new System.Drawing.Size(1113, 692);
             this.Load += new System.EventHandler(this.Form_Transaksi_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaksi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
