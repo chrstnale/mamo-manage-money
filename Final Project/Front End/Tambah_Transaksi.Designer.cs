@@ -39,7 +39,7 @@ namespace Front_End
             this.tbNominalTrans = new System.Windows.Forms.TextBox();
             this.tbNoteTrans = new System.Windows.Forms.TextBox();
             this.cbKategoriTrans = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbSumberTrans = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.rbPendapatan = new System.Windows.Forms.RadioButton();
             this.rbPengeluaran = new System.Windows.Forms.RadioButton();
@@ -154,17 +154,17 @@ namespace Front_End
             this.cbKategoriTrans.Size = new System.Drawing.Size(296, 28);
             this.cbKategoriTrans.TabIndex = 9;
             // 
-            // comboBox1
+            // cbSumberTrans
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbSumberTrans.FormattingEnabled = true;
+            this.cbSumberTrans.Items.AddRange(new object[] {
             "Bank",
             "E-Wallet",
             "Tunai"});
-            this.comboBox1.Location = new System.Drawing.Point(118, 318);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(296, 28);
-            this.comboBox1.TabIndex = 10;
+            this.cbSumberTrans.Location = new System.Drawing.Point(118, 318);
+            this.cbSumberTrans.Name = "cbSumberTrans";
+            this.cbSumberTrans.Size = new System.Drawing.Size(296, 28);
+            this.cbSumberTrans.TabIndex = 10;
             // 
             // dateTimePicker1
             // 
@@ -237,6 +237,7 @@ namespace Front_End
             this.btnAddTransBaru.TabIndex = 4;
             this.btnAddTransBaru.Text = "Tambah";
             this.btnAddTransBaru.UseVisualStyleBackColor = false;
+            this.btnAddTransBaru.Click += new System.EventHandler(this.btnAddTransBaru_Click);
             // 
             // Tambah_Transaksi
             // 
@@ -249,7 +250,7 @@ namespace Front_End
             this.Controls.Add(this.rbPengeluaran);
             this.Controls.Add(this.rbPendapatan);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbSumberTrans);
             this.Controls.Add(this.cbKategoriTrans);
             this.Controls.Add(this.tbNoteTrans);
             this.Controls.Add(this.tbNominalTrans);
@@ -262,6 +263,7 @@ namespace Front_End
             this.Controls.Add(this.lbNominalTrans);
             this.Name = "Tambah_Transaksi";
             this.Text = "Tambah_Transaksi";
+            this.Load += new System.EventHandler(this.Tambah_Transaksi_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -281,7 +283,7 @@ namespace Front_End
         private System.Windows.Forms.TextBox tbNominalTrans;
         private System.Windows.Forms.TextBox tbNoteTrans;
         private System.Windows.Forms.ComboBox cbKategoriTrans;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbSumberTrans;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.RadioButton rbPendapatan;
         private System.Windows.Forms.RadioButton rbPengeluaran;

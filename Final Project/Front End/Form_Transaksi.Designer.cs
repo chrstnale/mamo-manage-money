@@ -90,6 +90,15 @@ namespace Front_End
             this.panel2.Size = new System.Drawing.Size(145, 42);
             this.panel2.TabIndex = 3;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnRefreshTrans);
+            this.panel2.Location = new System.Drawing.Point(173, 86);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(129, 38);
+            this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
             // btnRefreshTrans
             // 
             this.btnRefreshTrans.BackColor = System.Drawing.Color.White;
@@ -101,6 +110,7 @@ namespace Front_End
             this.btnRefreshTrans.TabIndex = 5;
             this.btnRefreshTrans.Text = "Refresh";
             this.btnRefreshTrans.UseVisualStyleBackColor = false;
+            this.btnRefreshTrans.Click += new System.EventHandler(this.btnRefreshTrans_Click);
             // 
             // Form_Transaksi
             // 
@@ -112,9 +122,9 @@ namespace Front_End
             this.Controls.Add(this.lblDataTrans);
             this.Controls.Add(this.dgvTransaction);
             this.Name = "Form_Transaksi";
-            this.Size = new System.Drawing.Size(1036, 635);
+            this.Size = new System.Drawing.Size(1113, 692);
             this.Load += new System.EventHandler(this.Form_Transaksi_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaksi)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
