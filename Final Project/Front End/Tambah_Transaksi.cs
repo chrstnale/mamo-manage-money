@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
+using System.Globalization;
 
 namespace Front_End
 {
@@ -42,7 +43,7 @@ namespace Front_End
                     cmd.Parameters.AddWithValue("_type", "Pendapatan");
                 else if(rbPengeluaran.Checked)
                     cmd.Parameters.AddWithValue("_type", "Pengeluaran");
-                cmd.Parameters.AddWithValue("_nominal", tbNominalTrans.Text);
+                cmd.Parameters.AddWithValue("_nominal", float.Parse(tbNominalTrans.Text, CultureInfo.InvariantCulture.NumberFormat));
                 cmd.Parameters.AddWithValue("_category", cbKategoriTrans.Text);
                 cmd.Parameters.AddWithValue("_notes", tbNoteTrans.Text);
                 cmd.Parameters.AddWithValue("_date", dateTimePicker1.Text);

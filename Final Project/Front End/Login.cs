@@ -25,12 +25,18 @@ namespace Front_End
 
         private void Login_Load(object sender, EventArgs e)
         {
-            main.Show();
+            
         }
 
         private void btnKeRegister_Click(object sender, EventArgs e)
         {
-            register.Show();
+            register.ShowDialog();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            main.Show();
+            this.Hide();
         }
     }
 }
