@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Front_End
 {
-    public partial class Form_Anggaran : UserControl
+    public partial class Tambah_Transaksi : Form
     {
-        public Form_Anggaran()
+        public Tambah_Transaksi()
         {
             InitializeComponent();
+        }
+
+        private void btnBatalTrans_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

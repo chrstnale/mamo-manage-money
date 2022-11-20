@@ -12,17 +12,18 @@ namespace Front_End
 {
     public partial class Form_Transaksi : UserControl
     {
+        Tambah_Transaksi addTransaksi = new Tambah_Transaksi();
         public Form_Transaksi()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnAddTrans_Click(object sender, EventArgs e)
         {
-
+            addTransaksi.Show();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void Form_Transaksi_Load(object sender, EventArgs e)
         {
 
         }

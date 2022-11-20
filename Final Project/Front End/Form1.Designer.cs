@@ -31,16 +31,19 @@ namespace Front_End
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAnggaran = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblLogout = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnAnggaran = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btnTransaksi = new System.Windows.Forms.Button();
-            this.form_Transaksi1 = new Front_End.Form_Transaksi();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
             this.form_Anggaran1 = new Front_End.Form_Anggaran();
+            this.form_Transaksi1 = new Front_End.Form_Transaksi();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -49,6 +52,7 @@ namespace Front_End
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.ForestGreen;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblLogout);
             this.panel1.Controls.Add(this.lblUsername);
@@ -57,13 +61,39 @@ namespace Front_End
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(259, 684);
+            this.panel1.Size = new System.Drawing.Size(259, 633);
             this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnAnggaran);
+            this.panel2.Location = new System.Drawing.Point(12, 214);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(247, 53);
+            this.panel2.TabIndex = 4;
+            // 
+            // btnAnggaran
+            // 
+            this.btnAnggaran.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnAnggaran.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
+            this.btnAnggaran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnggaran.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAnggaran.ForeColor = System.Drawing.Color.White;
+            this.btnAnggaran.Image = ((System.Drawing.Image)(resources.GetObject("btnAnggaran.Image")));
+            this.btnAnggaran.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnggaran.Location = new System.Drawing.Point(-9, -10);
+            this.btnAnggaran.Name = "btnAnggaran";
+            this.btnAnggaran.Size = new System.Drawing.Size(266, 70);
+            this.btnAnggaran.TabIndex = 3;
+            this.btnAnggaran.Text = "Anggaran";
+            this.btnAnggaran.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAnggaran.UseVisualStyleBackColor = false;
+            this.btnAnggaran.Click += new System.EventHandler(this.btnAnggaran_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(33, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 33);
             this.pictureBox1.TabIndex = 6;
@@ -86,7 +116,7 @@ namespace Front_End
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblUsername.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Location = new System.Drawing.Point(78, 18);
+            this.lblUsername.Location = new System.Drawing.Point(69, 18);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(120, 41);
             this.lblUsername.TabIndex = 4;
@@ -94,82 +124,88 @@ namespace Front_End
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btnAnggaran);
-            this.panel4.Location = new System.Drawing.Point(3, 155);
+            this.panel4.Controls.Add(this.btnTransaksi);
+            this.panel4.Location = new System.Drawing.Point(12, 155);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(256, 53);
+            this.panel4.Size = new System.Drawing.Size(247, 53);
             this.panel4.TabIndex = 3;
-            // 
-            // btnAnggaran
-            // 
-            this.btnAnggaran.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnAnggaran.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAnggaran.ForeColor = System.Drawing.Color.White;
-            this.btnAnggaran.Image = ((System.Drawing.Image)(resources.GetObject("btnAnggaran.Image")));
-            this.btnAnggaran.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnggaran.Location = new System.Drawing.Point(-11, -7);
-            this.btnAnggaran.Name = "btnAnggaran";
-            this.btnAnggaran.Size = new System.Drawing.Size(283, 70);
-            this.btnAnggaran.TabIndex = 3;
-            this.btnAnggaran.Text = "Anggaran";
-            this.btnAnggaran.UseVisualStyleBackColor = false;
-            this.btnAnggaran.Click += new System.EventHandler(this.btnAnggaran_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnTransaksi);
-            this.panel3.Location = new System.Drawing.Point(0, 96);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(259, 53);
-            this.panel3.TabIndex = 2;
             // 
             // btnTransaksi
             // 
             this.btnTransaksi.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnTransaksi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
+            this.btnTransaksi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransaksi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnTransaksi.ForeColor = System.Drawing.Color.White;
             this.btnTransaksi.Image = ((System.Drawing.Image)(resources.GetObject("btnTransaksi.Image")));
             this.btnTransaksi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransaksi.Location = new System.Drawing.Point(-8, -15);
+            this.btnTransaksi.Location = new System.Drawing.Point(-9, -13);
             this.btnTransaksi.Name = "btnTransaksi";
-            this.btnTransaksi.Size = new System.Drawing.Size(280, 78);
+            this.btnTransaksi.Size = new System.Drawing.Size(266, 78);
             this.btnTransaksi.TabIndex = 2;
-            this.btnTransaksi.Text = "    Transaksi";
+            this.btnTransaksi.Text = "Transaksi";
             this.btnTransaksi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTransaksi.UseVisualStyleBackColor = false;
             this.btnTransaksi.Click += new System.EventHandler(this.btnTransaksi_Click);
             // 
-            // form_Transaksi1
+            // panel3
             // 
-            this.form_Transaksi1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.form_Transaksi1.Location = new System.Drawing.Point(259, 0);
-            this.form_Transaksi1.Name = "form_Transaksi1";
-            this.form_Transaksi1.Size = new System.Drawing.Size(1101, 684);
-            this.form_Transaksi1.TabIndex = 1;
-            this.form_Transaksi1.Visible = false;
+            this.panel3.Controls.Add(this.btnHome);
+            this.panel3.Location = new System.Drawing.Point(12, 96);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(247, 53);
+            this.panel3.TabIndex = 2;
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(-9, -11);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(266, 67);
+            this.btnHome.TabIndex = 4;
+            this.btnHome.Text = "Home";
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // form_Anggaran1
             // 
+            this.form_Anggaran1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.form_Anggaran1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.form_Anggaran1.Location = new System.Drawing.Point(259, 0);
             this.form_Anggaran1.Name = "form_Anggaran1";
-            this.form_Anggaran1.Size = new System.Drawing.Size(1101, 684);
-            this.form_Anggaran1.TabIndex = 2;
-            this.form_Anggaran1.Visible = false;
+            this.form_Anggaran1.Size = new System.Drawing.Size(1036, 633);
+            this.form_Anggaran1.TabIndex = 1;
+            // 
+            // form_Transaksi1
+            // 
+            this.form_Transaksi1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.form_Transaksi1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.form_Transaksi1.Location = new System.Drawing.Point(259, 0);
+            this.form_Transaksi1.Name = "form_Transaksi1";
+            this.form_Transaksi1.Size = new System.Drawing.Size(1036, 633);
+            this.form_Transaksi1.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1360, 684);
-            this.Controls.Add(this.form_Anggaran1);
+            this.ClientSize = new System.Drawing.Size(1295, 633);
             this.Controls.Add(this.form_Transaksi1);
+            this.Controls.Add(this.form_Anggaran1);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Mamo - Manage Money";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -187,8 +223,10 @@ namespace Front_End
         private System.Windows.Forms.Button btnAnggaran;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnTransaksi;
-        private Form_Transaksi form_Transaksi1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnHome;
         private Form_Anggaran form_Anggaran1;
+        private Form_Transaksi form_Transaksi1;
     }
 }
 
