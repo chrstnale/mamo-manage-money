@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Front_End
 {
-    public partial class Tambah_Transaksi : Form
+    public partial class Form_Home : UserControl
     {
-        public Tambah_Transaksi()
+        public Form_Home()
         {
             InitializeComponent();
         }
 
-        private void btnBatalTrans_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void Tambah_Transaksi_Load(object sender, EventArgs e)
+        private void lblHomePage_Click(object sender, EventArgs e)
         {
 
         }

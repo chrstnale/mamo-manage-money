@@ -262,6 +262,7 @@ namespace Front_End
             this.Controls.Add(this.lbNominalTrans);
             this.Name = "Tambah_Transaksi";
             this.Text = "Tambah_Transaksi";
+            this.Load += new System.EventHandler(this.Tambah_Transaksi_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
