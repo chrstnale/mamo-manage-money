@@ -24,3 +24,6 @@ Mamoo
 
 ### Class Diagram
 ![Class Diagram](https://github.com/chrstnale/mamo-manage-money/blob/main/modul-2/classes.png?raw=true)
+
+### Entity Relationship Diagram
+![Class Diagram](https://github.com/chrstnale/mamo-manage-money/blob/main/modul-4/erd-mamo.png?raw=true)
