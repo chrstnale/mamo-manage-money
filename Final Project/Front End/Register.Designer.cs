@@ -45,6 +45,7 @@ namespace Front_End
             this.lbRegister = new System.Windows.Forms.Label();
             this.tbNama = new System.Windows.Forms.TextBox();
             this.lbNama = new System.Windows.Forms.Label();
+            this.tbGoogle = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -83,6 +84,7 @@ namespace Front_End
             this.pictureBox1.Size = new System.Drawing.Size(317, 333);
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel3
             // 
@@ -224,12 +226,21 @@ namespace Front_End
             this.lbNama.TabIndex = 30;
             this.lbNama.Text = "Nama";
             // 
+            // tbGoogle
+            // 
+            this.tbGoogle.Location = new System.Drawing.Point(38, 217);
+            this.tbGoogle.Name = "tbGoogle";
+            this.tbGoogle.Size = new System.Drawing.Size(169, 96);
+            this.tbGoogle.TabIndex = 32;
+            this.tbGoogle.Text = "";
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(640, 333);
+            this.Controls.Add(this.tbGoogle);
             this.Controls.Add(this.tbNama);
             this.Controls.Add(this.lbNama);
             this.Controls.Add(this.panel3);
@@ -273,5 +284,6 @@ namespace Front_End
         private System.Windows.Forms.Label lbRegister;
         private System.Windows.Forms.TextBox tbNama;
         private System.Windows.Forms.Label lbNama;
+        private System.Windows.Forms.RichTextBox tbGoogle;
     }
 }
