@@ -133,6 +133,7 @@ namespace Front_End
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(275, 20);
             this.tbPassword.TabIndex = 8;
+            this.tbPassword.UseSystemPasswordChar = true;
             this.tbPassword.UseWaitCursor = true;
             // 
             // lbPassword
