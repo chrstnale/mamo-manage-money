@@ -37,23 +37,21 @@ namespace Front_End
             try
             {
                 conn.Open();
-                sql = @"select * from transactions_insert(:_category,:_nominal,:_tanggalAwal,:_tanggalAkhir)";
+                sql = @"select * from budget_insert(:_category,:_nominal,:_tanggalAwal,:_tanggalAkhir);";
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("_category", cbKategoriBudget.Text);
                 cmd.Parameters.AddWithValue("_nominal", float.Parse(tbNominalBudget.Text, CultureInfo.InvariantCulture.NumberFormat));
                 if (cbOpsiBudget.Text == "Mingguan")
                 {
-                    sql = @"insert into tb_budget(""tanggalAwal"",""tanggalAkhir"") values (date_trunc('week', current_date), date_trunc('week', current_date) + interval '1 WEEK' - interval '1 DAY')";
+                    sql = @"insert into tb_budget(_tanggalAwal,_tanggalAkhir) values (date_trunc('week', current_date), date_trunc('week', current_date) + interval '1 WEEK' - interval '1 DAY');";
                 }
                 else if (cbOpsiBudget.Text == "Bulanan")
                 {
-                    sql = @"insert into tb_budget (""tanggalAwal"", ""tanggalAkhir"") values
-                                (date_trunc('month',  current_date), date_trunc('month', current_date) + interval '1 MONTH' - interval '1 DAY')";
+                    sql = @"insert into tb_budget (_tanggalAwal, _tanggalAkhir) values (date_trunc('month',  current_date), date_trunc('month', current_date) + interval '1 MONTH' - interval '1 DAY');";
                 }
                 else if (cbOpsiBudget.Text == "Tahunan")
                 {
-                    sql = @"insert into tb_budget (""tanggalAwal"", ""tanggalAkhir"") values
-                                (date_trunc('year',  current_date), date_trunc('year', current_date) + interval '1 YEAR' - interval '1 DAY')";
+                    sql = @"insert into tb_budget (_tanggalAwal, _tanggalAkhir) values (date_trunc('year',  current_date), date_trunc('year', current_date) + interval '1 YEAR' - interval '1 DAY');";
                 }
                     
                 if ((int)cmd.ExecuteScalar() == 1)

@@ -38,14 +38,19 @@ namespace Front_End
                 conn.Open();
                 sql = @"select * from transactions_insert(:_type,:_category,:_notes,:_source,:_nominal,:_date)";
                 cmd = new NpgsqlCommand(sql, conn);
-                if (rbPendapatan.Checked)
-                    cmd.Parameters.AddWithValue("_type", "Pendapatan");
-                else if(rbPengeluaran.Checked)
-                    cmd.Parameters.AddWithValue("_type", "Pengeluaran");
                 float nominal = float.Parse(tbNominalTrans.Text, CultureInfo.InvariantCulture.NumberFormat);
                 cmd.Parameters.AddWithValue("_nominal", nominal);
                 double nominalBudget = Convert.ToDouble(cmd.ExecuteScalar());
-                nominalBudget += nominal;
+                if (rbPendapatan.Checked)
+                {
+                    cmd.Parameters.AddWithValue("_type", "Pendapatan");
+                    nominalBudget += nominal;
+                }
+                else if (rbPengeluaran.Checked)
+                {
+                    cmd.Parameters.AddWithValue("_type", "Pengeluaran");
+                    nominalBudget -= nominal;
+                }
                 cmd.Parameters.AddWithValue("_category", cbKategoriTrans.Text);
                 cmd.Parameters.AddWithValue("_notes", tbNoteTrans.Text);
                 cmd.Parameters.AddWithValue("_date", dateTimePicker1.Text);
