@@ -56,9 +56,8 @@ namespace Front_End
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = global::Front_End.Properties.Resources.mamo3;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(317, 333);
+            this.pictureBox1.Size = new System.Drawing.Size(362, 444);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -67,9 +66,9 @@ namespace Front_End
             this.lblWelcome1.AutoSize = true;
             this.lblWelcome1.Font = new System.Drawing.Font("Segoe UI Semibold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblWelcome1.ForeColor = System.Drawing.Color.White;
-            this.lblWelcome1.Location = new System.Drawing.Point(25, 113);
+            this.lblWelcome1.Location = new System.Drawing.Point(29, 151);
             this.lblWelcome1.Name = "lblWelcome1";
-            this.lblWelcome1.Size = new System.Drawing.Size(237, 41);
+            this.lblWelcome1.Size = new System.Drawing.Size(288, 50);
             this.lblWelcome1.TabIndex = 1;
             this.lblWelcome1.Text = "Selamat Datang";
             // 
@@ -78,9 +77,9 @@ namespace Front_End
             this.lblWelcome2.AutoSize = true;
             this.lblWelcome2.Font = new System.Drawing.Font("Segoe UI Semibold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblWelcome2.ForeColor = System.Drawing.Color.White;
-            this.lblWelcome2.Location = new System.Drawing.Point(25, 151);
+            this.lblWelcome2.Location = new System.Drawing.Point(29, 201);
             this.lblWelcome2.Name = "lblWelcome2";
-            this.lblWelcome2.Size = new System.Drawing.Size(160, 41);
+            this.lblWelcome2.Size = new System.Drawing.Size(196, 50);
             this.lblWelcome2.TabIndex = 2;
             this.lblWelcome2.Text = "di MAMO!";
             // 
@@ -88,9 +87,9 @@ namespace Front_End
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(339, 20);
+            this.label3.Location = new System.Drawing.Point(387, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 30);
+            this.label3.Size = new System.Drawing.Size(88, 38);
             this.label3.TabIndex = 3;
             this.label3.Text = "Login";
             // 
@@ -98,9 +97,9 @@ namespace Front_End
             // 
             this.lbInstruction.AutoSize = true;
             this.lbInstruction.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbInstruction.Location = new System.Drawing.Point(340, 63);
+            this.lbInstruction.Location = new System.Drawing.Point(389, 84);
             this.lbInstruction.Name = "lbInstruction";
-            this.lbInstruction.Size = new System.Drawing.Size(248, 40);
+            this.lbInstruction.Size = new System.Drawing.Size(301, 50);
             this.lbInstruction.TabIndex = 4;
             this.lbInstruction.Text = "Masukkan Email dan Password Anda\r\nuntuk Login!";
             // 
@@ -108,9 +107,9 @@ namespace Front_End
             // 
             this.lbEmail.AutoSize = true;
             this.lbEmail.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbEmail.Location = new System.Drawing.Point(340, 113);
+            this.lbEmail.Location = new System.Drawing.Point(389, 151);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(46, 20);
+            this.lbEmail.Size = new System.Drawing.Size(54, 25);
             this.lbEmail.TabIndex = 5;
             this.lbEmail.Text = "Email";
             // 
@@ -118,51 +117,49 @@ namespace Front_End
             // 
             this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbEmail.Location = new System.Drawing.Point(340, 136);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbEmail.Location = new System.Drawing.Point(389, 181);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(275, 20);
+            this.tbEmail.Size = new System.Drawing.Size(314, 24);
             this.tbEmail.TabIndex = 6;
             // 
             // tbPassword
             // 
             this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbPassword.Location = new System.Drawing.Point(340, 188);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPassword.Location = new System.Drawing.Point(389, 251);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(275, 20);
+            this.tbPassword.Size = new System.Drawing.Size(314, 24);
             this.tbPassword.TabIndex = 8;
+            this.tbPassword.UseSystemPasswordChar = true;
             this.tbPassword.UseWaitCursor = true;
             // 
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
             this.lbPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbPassword.Location = new System.Drawing.Point(340, 166);
+            this.lbPassword.Location = new System.Drawing.Point(389, 221);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(70, 20);
+            this.lbPassword.Size = new System.Drawing.Size(87, 25);
             this.lbPassword.TabIndex = 7;
             this.lbPassword.Text = "Password";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnKeRegister);
-            this.panel2.Location = new System.Drawing.Point(339, 289);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(387, 385);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(275, 28);
+            this.panel2.Size = new System.Drawing.Size(314, 37);
             this.panel2.TabIndex = 17;
             // 
             // btnKeRegister
             // 
             this.btnKeRegister.BackColor = System.Drawing.Color.White;
+            this.btnKeRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKeRegister.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnKeRegister.ForeColor = System.Drawing.Color.Black;
-            this.btnKeRegister.Location = new System.Drawing.Point(-13, -10);
-            this.btnKeRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnKeRegister.Location = new System.Drawing.Point(-15, -13);
             this.btnKeRegister.Name = "btnKeRegister";
-            this.btnKeRegister.Size = new System.Drawing.Size(303, 44);
+            this.btnKeRegister.Size = new System.Drawing.Size(346, 59);
             this.btnKeRegister.TabIndex = 5;
             this.btnKeRegister.Text = "Belum punya Akun";
             this.btnKeRegister.UseVisualStyleBackColor = false;
@@ -171,21 +168,20 @@ namespace Front_End
             // panel1
             // 
             this.panel1.Controls.Add(this.btnLogin);
-            this.panel1.Location = new System.Drawing.Point(339, 222);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(387, 296);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(275, 27);
+            this.panel1.Size = new System.Drawing.Size(314, 36);
             this.panel1.TabIndex = 16;
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(-14, -10);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogin.Location = new System.Drawing.Point(-16, -13);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(304, 44);
+            this.btnLogin.Size = new System.Drawing.Size(347, 59);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -194,21 +190,20 @@ namespace Front_End
             // panel3
             // 
             this.panel3.Controls.Add(this.btnLoginGoogle);
-            this.panel3.Location = new System.Drawing.Point(339, 256);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(387, 341);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(275, 28);
+            this.panel3.Size = new System.Drawing.Size(314, 37);
             this.panel3.TabIndex = 18;
             // 
             // btnLoginGoogle
             // 
             this.btnLoginGoogle.BackColor = System.Drawing.Color.White;
+            this.btnLoginGoogle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLoginGoogle.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLoginGoogle.ForeColor = System.Drawing.Color.Black;
-            this.btnLoginGoogle.Location = new System.Drawing.Point(-13, -10);
-            this.btnLoginGoogle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLoginGoogle.Location = new System.Drawing.Point(-15, -13);
             this.btnLoginGoogle.Name = "btnLoginGoogle";
-            this.btnLoginGoogle.Size = new System.Drawing.Size(303, 44);
+            this.btnLoginGoogle.Size = new System.Drawing.Size(346, 59);
             this.btnLoginGoogle.TabIndex = 5;
             this.btnLoginGoogle.Text = "Login dengan Akun Google";
             this.btnLoginGoogle.UseVisualStyleBackColor = false;
@@ -216,18 +211,19 @@ namespace Front_End
             // 
             // tbGoogle
             // 
-            this.tbGoogle.Location = new System.Drawing.Point(25, 212);
+            this.tbGoogle.Location = new System.Drawing.Point(29, 283);
+            this.tbGoogle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbGoogle.Name = "tbGoogle";
-            this.tbGoogle.Size = new System.Drawing.Size(237, 96);
+            this.tbGoogle.Size = new System.Drawing.Size(270, 127);
             this.tbGoogle.TabIndex = 19;
             this.tbGoogle.Text = "";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(640, 333);
+            this.ClientSize = new System.Drawing.Size(731, 444);
             this.Controls.Add(this.tbGoogle);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -241,7 +237,6 @@ namespace Front_End
             this.Controls.Add(this.lblWelcome2);
             this.Controls.Add(this.lblWelcome1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
             this.Text = "Login to MAMO";
             this.Load += new System.EventHandler(this.Login_Load);

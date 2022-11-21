@@ -51,7 +51,7 @@ namespace Front_End
         private void btnLogin_Click(object sender, EventArgs e)
         {
             main.Show();
-            /*this.Hide();
+            this.Hide();
             bool blnfound = false;
 
             NpgsqlConnection con = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=hapsari;Database=mamodb;");
@@ -71,7 +71,7 @@ namespace Front_End
                 MessageBox.Show("Ups! Email atau password tidak benar", "Email atau password tidak tepat!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             dr.Close();
-            con.Close();*/
+            con.Close();
         }
 
         public static int GetRandomUnusedPort()

@@ -148,11 +148,13 @@ namespace Front_End
             // tbPassword
             // 
             this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPassword.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbPassword.Location = new System.Drawing.Point(390, 246);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(314, 24);
             this.tbPassword.TabIndex = 26;
+            this.tbPassword.UseSystemPasswordChar = true;
             this.tbPassword.UseWaitCursor = true;
             // 
             // lbPassword
