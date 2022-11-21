@@ -177,7 +177,7 @@ namespace Front_End
             this.Controls.Add(this.lbOpsiBudget);
             this.Controls.Add(this.lbNominalBudget);
             this.Name = "Tambah_Anggaran";
-            this.Text = "Form_Home";
+            this.Text = "Tambah Anggaran";
             this.Load += new System.EventHandler(this.Tambah_Anggaran_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

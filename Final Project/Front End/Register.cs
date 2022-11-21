@@ -26,5 +26,10 @@ namespace Front_End
         {
             this.Hide();
         }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
