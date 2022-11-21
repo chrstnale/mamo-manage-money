@@ -15,6 +15,7 @@ using Newtonsoft.Json;
 using Npgsql;
 using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Diagnostics;
 
 namespace Front_End
 {
@@ -50,19 +51,16 @@ namespace Front_End
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            main.Show();
-            this.Hide();
             bool blnfound = false;
 
-            NpgsqlConnection con = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=hapsari;Database=mamodb;");
+            NpgsqlConnection con = new NpgsqlConnection("Host=localhost;Port=4321;Username=postgres;Password=A15p12D15;Database=mamo;");
             con.Open();
             NpgsqlCommand cmd = new NpgsqlCommand("Select * from tb_user where email = '" + tbEmail.Text + "' and password = '" + tbPassword.Text + "'", con);
             NpgsqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
                 blnfound = true;
-                Form1 fr = new Form1();
-                fr.Show();
+                main.Show();
                 this.Hide();
             }
 
@@ -71,7 +69,7 @@ namespace Front_End
                 MessageBox.Show("Ups! Email atau password tidak benar", "Email atau password tidak tepat!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             dr.Close();
-            con.Close();
+            con.Close(); 
         }
 
         public static int GetRandomUnusedPort()
@@ -101,7 +99,7 @@ namespace Front_End
             HttpWebRequest tokenRequest = (HttpWebRequest)WebRequest.Create(tokenRequestURI);
             tokenRequest.Method = "POST";
             tokenRequest.ContentType = "application/x-www-form-urlencoded";
-            tokenRequest.Accept = "Accept=text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";
+            tokenRequest.Accept = "Accept=text/html,application/xhtml+xml,application/xml;q=0.9,*;q=0.8";
             byte[] _byteVersion = Encoding.ASCII.GetBytes(tokenRequestBody);
             tokenRequest.ContentLength = _byteVersion.Length;
             Stream stream = tokenRequest.GetRequestStream();
@@ -168,6 +166,8 @@ namespace Front_End
                 string userinfoResponseText = await userinfoResponseReader.ReadToEndAsync();
                 output(userinfoResponseText);
             }
+            main.Show();
+            this.Hide();
         }
 
         /// <summary>
@@ -236,8 +236,13 @@ namespace Front_End
                 code_challenge,
                 code_challenge_method);
 
-            // Opens request in the browser.
-            System.Diagnostics.Process.Start(authorizationRequest);
+            using (Process compiler = new Process())
+            {
+                compiler.StartInfo.FileName = authorizationRequest;
+                compiler.StartInfo.Arguments = "/r:System.dll /out:sample.exe stdstr.cs";
+                compiler.StartInfo.UseShellExecute = true;
+                compiler.Start();
+            }
 
             // Waits for the OAuth authorization response.
             var context = await http.GetContextAsync();
@@ -288,29 +293,5 @@ namespace Front_End
             performCodeExchange(code, code_verifier, redirectURI);
 
         }
-
-        /*private void btnLogin_Click(object sender, EventArgs e)
-        {
-            bool blnfound = false;
-
-            NpgsqlConnection con = new NpgsqlConnection("Host=localhost;Port=4321;Username=postgres;Password=A15p12D15;Database=mamodb;");
-            con.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("Select * from tb_user where email = '" + tbEmail.Text + "' and password = '" + tbPassword.Text + "'", con);
-            NpgsqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read())
-            {
-                blnfound = true;
-                Form1 fr = new Form1();
-                fr.Show();
-                this.Hide();
-            }
-
-            if (blnfound == false)
-            {
-                MessageBox.Show("Ups! Email atau password tidak benar", "Email atau password tidak tepat!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            dr.Close();
-            con.Close();
-        }*/
     }
 }
