@@ -50,19 +50,16 @@ namespace Front_End
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            main.Show();
-            /*this.Hide();
             bool blnfound = false;
 
-            NpgsqlConnection con = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=hapsari;Database=mamodb;");
+            NpgsqlConnection con = new NpgsqlConnection("Host=localhost;Port=4321;Username=postgres;Password=A15p12D15;Database=mamo;");
             con.Open();
             NpgsqlCommand cmd = new NpgsqlCommand("Select * from tb_user where email = '" + tbEmail.Text + "' and password = '" + tbPassword.Text + "'", con);
             NpgsqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
                 blnfound = true;
-                Form1 fr = new Form1();
-                fr.Show();
+                main.Show();
                 this.Hide();
             }
 
@@ -71,7 +68,7 @@ namespace Front_End
                 MessageBox.Show("Ups! Email atau password tidak benar", "Email atau password tidak tepat!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             dr.Close();
-            con.Close();*/
+            con.Close(); 
         }
 
         public static int GetRandomUnusedPort()
@@ -101,7 +98,7 @@ namespace Front_End
             HttpWebRequest tokenRequest = (HttpWebRequest)WebRequest.Create(tokenRequestURI);
             tokenRequest.Method = "POST";
             tokenRequest.ContentType = "application/x-www-form-urlencoded";
-            tokenRequest.Accept = "Accept=text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";
+            tokenRequest.Accept = "Accept=text/html,application/xhtml+xml,application/xml;q=0.9,*;q=0.8";
             byte[] _byteVersion = Encoding.ASCII.GetBytes(tokenRequestBody);
             tokenRequest.ContentLength = _byteVersion.Length;
             Stream stream = tokenRequest.GetRequestStream();
