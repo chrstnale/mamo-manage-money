@@ -138,6 +138,7 @@ namespace Front_End
             // 
             // cbKategoriTrans
             // 
+            this.cbKategoriTrans.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbKategoriTrans.FormattingEnabled = true;
             this.cbKategoriTrans.Items.AddRange(new object[] {
             "Amal",
@@ -156,6 +157,7 @@ namespace Front_End
             // 
             // cbSumberTrans
             // 
+            this.cbSumberTrans.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSumberTrans.FormattingEnabled = true;
             this.cbSumberTrans.Items.AddRange(new object[] {
             "Bank",

@@ -82,6 +82,7 @@ namespace Front_End
             this.btnAddBudget.TabIndex = 4;
             this.btnAddBudget.Text = "Tambah";
             this.btnAddBudget.UseVisualStyleBackColor = false;
+            this.btnAddBudget.Click += new System.EventHandler(this.btnAddBudget_Click);
             // 
             // lblDataTrans
             // 
@@ -115,6 +116,7 @@ namespace Front_End
             this.Controls.Add(this.dgvBudget);
             this.Name = "Form_Anggaran";
             this.Size = new System.Drawing.Size(1036, 635);
+            this.Load += new System.EventHandler(this.Form_Anggaran_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBudget)).EndInit();

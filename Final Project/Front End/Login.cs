@@ -54,7 +54,7 @@ namespace Front_End
             /*this.Hide();
             bool blnfound = false;
 
-            NpgsqlConnection con = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=hapsari;Database=mamodb;");
+            NpgsqlConnection con = new NpgsqlConnection("Host=localhost;Port=2022;Username=postgres;Password=informatika;Database=mamodb;");
             con.Open();
             NpgsqlCommand cmd = new NpgsqlCommand("Select * from tb_user where email = '" + tbEmail.Text + "' and password = '" + tbPassword.Text + "'", con);
             NpgsqlDataReader dr = cmd.ExecuteReader();
@@ -288,29 +288,5 @@ namespace Front_End
             performCodeExchange(code, code_verifier, redirectURI);
 
         }
-
-        /*private void btnLogin_Click(object sender, EventArgs e)
-        {
-            bool blnfound = false;
-
-            NpgsqlConnection con = new NpgsqlConnection("Host=localhost;Port=4321;Username=postgres;Password=A15p12D15;Database=mamodb;");
-            con.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("Select * from tb_user where email = '" + tbEmail.Text + "' and password = '" + tbPassword.Text + "'", con);
-            NpgsqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read())
-            {
-                blnfound = true;
-                Form1 fr = new Form1();
-                fr.Show();
-                this.Hide();
-            }
-
-            if (blnfound == false)
-            {
-                MessageBox.Show("Ups! Email atau password tidak benar", "Email atau password tidak tepat!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            dr.Close();
-            con.Close();
-        }*/
     }
 }

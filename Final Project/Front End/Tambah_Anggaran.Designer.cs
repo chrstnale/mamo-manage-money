@@ -29,6 +29,7 @@ namespace Front_End
         /// </summary>
         private void InitializeComponent()
         {
+            this.cbOpsiBudget = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnBatalTrans = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -39,10 +40,22 @@ namespace Front_End
             this.lbKategoriBudget = new System.Windows.Forms.Label();
             this.lbOpsiBudget = new System.Windows.Forms.Label();
             this.lbNominalBudget = new System.Windows.Forms.Label();
-            this.cbOpsiBudget = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // cbOpsiBudget
+            // 
+            this.cbOpsiBudget.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbOpsiBudget.FormattingEnabled = true;
+            this.cbOpsiBudget.Items.AddRange(new object[] {
+            "Mingguan",
+            "Bulanan",
+            "Tahunan"});
+            this.cbOpsiBudget.Location = new System.Drawing.Point(130, 173);
+            this.cbOpsiBudget.Name = "cbOpsiBudget";
+            this.cbOpsiBudget.Size = new System.Drawing.Size(296, 28);
+            this.cbOpsiBudget.TabIndex = 32;
             // 
             // panel2
             // 
@@ -83,9 +96,11 @@ namespace Front_End
             this.btnAddTransBaru.TabIndex = 4;
             this.btnAddTransBaru.Text = "Tambah";
             this.btnAddTransBaru.UseVisualStyleBackColor = false;
+            this.btnAddTransBaru.Click += new System.EventHandler(this.btnAddTransBaru_Click);
             // 
             // cbKategoriBudget
             // 
+            this.cbKategoriBudget.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbKategoriBudget.FormattingEnabled = true;
             this.cbKategoriBudget.Items.AddRange(new object[] {
             "Amal",
@@ -148,18 +163,6 @@ namespace Front_End
             this.lbNominalBudget.Size = new System.Drawing.Size(87, 28);
             this.lbNominalBudget.TabIndex = 16;
             this.lbNominalBudget.Text = "Nominal";
-            // 
-            // cbOpsiBudget
-            // 
-            this.cbOpsiBudget.FormattingEnabled = true;
-            this.cbOpsiBudget.Items.AddRange(new object[] {
-            "Mingguan",
-            "Bulanan",
-            "Tahunan"});
-            this.cbOpsiBudget.Location = new System.Drawing.Point(130, 173);
-            this.cbOpsiBudget.Name = "cbOpsiBudget";
-            this.cbOpsiBudget.Size = new System.Drawing.Size(296, 28);
-            this.cbOpsiBudget.TabIndex = 32;
             // 
             // Tambah_Anggaran
             // 
