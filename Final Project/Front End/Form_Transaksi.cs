@@ -54,5 +54,11 @@ namespace Front_End
             Tambah_Transaksi newTrans = new Tambah_Transaksi();
             newTrans.Show();
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Tambah_Transaksi editTrans = new Tambah_Transaksi();
+            editTrans.Show();
+        }
     }
 }
