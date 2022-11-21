@@ -85,6 +85,7 @@ namespace Front_End
             // btnAnggaran
             // 
             this.btnAnggaran.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnAnggaran.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAnggaran.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
             this.btnAnggaran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnggaran.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -133,6 +134,7 @@ namespace Front_End
             // btnTransaksi
             // 
             this.btnTransaksi.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnTransaksi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTransaksi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
             this.btnTransaksi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransaksi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -159,6 +161,7 @@ namespace Front_End
             // btnHome
             // 
             this.btnHome.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);

@@ -34,10 +34,17 @@ namespace Front_End
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddTrans = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnRefreshTrans = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnEditTrans = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnDeleteTrans = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvTransaction
@@ -85,11 +92,25 @@ namespace Front_End
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnRefreshTrans);
             this.panel2.Location = new System.Drawing.Point(173, 72);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(140, 42);
             this.panel2.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.DimGray;
+            this.button1.Location = new System.Drawing.Point(-18, -8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(176, 59);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btnRefreshTrans
             // 
@@ -105,21 +126,67 @@ namespace Front_End
             this.btnRefreshTrans.UseVisualStyleBackColor = false;
             this.btnRefreshTrans.Click += new System.EventHandler(this.btnRefreshTrans_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnEditTrans);
+            this.panel3.Location = new System.Drawing.Point(324, 72);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(140, 42);
+            this.panel3.TabIndex = 7;
+            // 
+            // btnEditTrans
+            // 
+            this.btnEditTrans.BackColor = System.Drawing.Color.White;
+            this.btnEditTrans.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditTrans.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEditTrans.ForeColor = System.Drawing.Color.DimGray;
+            this.btnEditTrans.Location = new System.Drawing.Point(-21, -11);
+            this.btnEditTrans.Name = "btnEditTrans";
+            this.btnEditTrans.Size = new System.Drawing.Size(176, 59);
+            this.btnEditTrans.TabIndex = 5;
+            this.btnEditTrans.Text = "Edit";
+            this.btnEditTrans.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnDeleteTrans);
+            this.panel4.Location = new System.Drawing.Point(477, 72);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(140, 42);
+            this.panel4.TabIndex = 8;
+            // 
+            // btnDeleteTrans
+            // 
+            this.btnDeleteTrans.BackColor = System.Drawing.Color.White;
+            this.btnDeleteTrans.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteTrans.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDeleteTrans.ForeColor = System.Drawing.Color.DimGray;
+            this.btnDeleteTrans.Location = new System.Drawing.Point(-21, -11);
+            this.btnDeleteTrans.Name = "btnDeleteTrans";
+            this.btnDeleteTrans.Size = new System.Drawing.Size(176, 59);
+            this.btnDeleteTrans.TabIndex = 5;
+            this.btnDeleteTrans.Text = "Delete";
+            this.btnDeleteTrans.UseVisualStyleBackColor = false;
+            // 
             // Form_Transaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblDataTrans);
             this.Controls.Add(this.dgvTransaction);
             this.Name = "Form_Transaksi";
-            this.Size = new System.Drawing.Size(1113, 692);
+            this.Size = new System.Drawing.Size(1036, 635);
             this.Load += new System.EventHandler(this.Form_Transaksi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,5 +200,10 @@ namespace Front_End
         private System.Windows.Forms.Button btnAddTrans;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnRefreshTrans;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnEditTrans;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnDeleteTrans;
     }
 }
