@@ -20,7 +20,7 @@ namespace Front_End
 {
     public partial class Login : Form
     {
-        //Form1 main = new Form1();
+        Form1 main = new Form1();
         Register register = new Register();
 
         const string clientID = "860054938972-k2u0tev9vr0mlo3nqluti2vl6g6ct8gs.apps.googleusercontent.com";
@@ -51,7 +51,27 @@ namespace Front_End
         private void btnLogin_Click(object sender, EventArgs e)
         {
             main.Show();
-            this.Hide();
+            /*this.Hide();
+            bool blnfound = false;
+
+            NpgsqlConnection con = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=hapsari;Database=mamodb;");
+            con.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("Select * from tb_user where email = '" + tbEmail.Text + "' and password = '" + tbPassword.Text + "'", con);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                blnfound = true;
+                Form1 fr = new Form1();
+                fr.Show();
+                this.Hide();
+            }
+
+            if (blnfound == false)
+            {
+                MessageBox.Show("Ups! Email atau password tidak benar", "Email atau password tidak tepat!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            dr.Close();
+            con.Close();*/
         }
 
         public static int GetRandomUnusedPort()
@@ -269,7 +289,7 @@ namespace Front_End
 
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        /*private void btnLogin_Click(object sender, EventArgs e)
         {
             bool blnfound = false;
 
@@ -291,6 +311,6 @@ namespace Front_End
             }
             dr.Close();
             con.Close();
-        }
+        }*/
     }
 }

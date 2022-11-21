@@ -29,7 +29,9 @@ namespace Front_End
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAnggaran = new System.Windows.Forms.Button();
             this.lblLogout = new System.Windows.Forms.Label();
@@ -40,7 +42,9 @@ namespace Front_End
             this.btnHome = new System.Windows.Forms.Button();
             this.form_Anggaran1 = new Front_End.Form_Anggaran();
             this.form_Transaksi1 = new Front_End.Form_Transaksi();
+            this.form_Home1 = new Front_End.Form_Home();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -49,6 +53,7 @@ namespace Front_End
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.ForestGreen;
+            this.panel1.Controls.Add(this.pbLogo);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lblLogout);
             this.panel1.Controls.Add(this.lblUsername);
@@ -59,6 +64,15 @@ namespace Front_End
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(259, 633);
             this.panel1.TabIndex = 0;
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
+            this.pbLogo.Location = new System.Drawing.Point(12, 3);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(59, 69);
+            this.pbLogo.TabIndex = 6;
+            this.pbLogo.TabStop = false;
             // 
             // panel2
             // 
@@ -75,6 +89,7 @@ namespace Front_End
             this.btnAnggaran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnggaran.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAnggaran.ForeColor = System.Drawing.Color.White;
+            this.btnAnggaran.Image = global::Front_End.Properties.Resources.pie_chart__2_;
             this.btnAnggaran.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAnggaran.Location = new System.Drawing.Point(-9, -10);
             this.btnAnggaran.Name = "btnAnggaran";
@@ -122,6 +137,7 @@ namespace Front_End
             this.btnTransaksi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransaksi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnTransaksi.ForeColor = System.Drawing.Color.White;
+            this.btnTransaksi.Image = global::Front_End.Properties.Resources.transfer__2_;
             this.btnTransaksi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTransaksi.Location = new System.Drawing.Point(-9, -13);
             this.btnTransaksi.Name = "btnTransaksi";
@@ -147,6 +163,7 @@ namespace Front_End
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = global::Front_End.Properties.Resources.home;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.Location = new System.Drawing.Point(-9, -11);
             this.btnHome.Name = "btnHome";
@@ -175,19 +192,32 @@ namespace Front_End
             this.form_Transaksi1.Size = new System.Drawing.Size(1036, 633);
             this.form_Transaksi1.TabIndex = 2;
             // 
+            // form_Home1
+            // 
+            this.form_Home1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.form_Home1.Location = new System.Drawing.Point(259, 0);
+            this.form_Home1.Name = "form_Home1";
+            this.form_Home1.Size = new System.Drawing.Size(1036, 633);
+            this.form_Home1.TabIndex = 3;
+            this.form_Home1.Load += new System.EventHandler(this.form_Home1_Load);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1295, 633);
+            this.Controls.Add(this.form_Home1);
             this.Controls.Add(this.form_Transaksi1);
             this.Controls.Add(this.form_Anggaran1);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Mamo - Manage Money";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -208,6 +238,8 @@ namespace Front_End
         private System.Windows.Forms.Button btnHome;
         private Form_Anggaran form_Anggaran1;
         private Form_Transaksi form_Transaksi1;
+        private System.Windows.Forms.PictureBox pbLogo;
+        private Form_Home form_Home1;
     }
 }
 
