@@ -53,7 +53,9 @@ namespace Front_End
         {
             bool blnfound = false;
 
-            NpgsqlConnection con = new NpgsqlConnection("Host=localhost;Port=4321;Username=postgres;Password=A15p12D15;Database=mamo;");
+
+            NpgsqlConnection con = new NpgsqlConnection("Host=localhost;Port=2022;Username=postgres;Password=informatika;Database=mamodb;");
+
             con.Open();
             NpgsqlCommand cmd = new NpgsqlCommand("Select * from tb_user where email = '" + tbEmail.Text + "' and password = '" + tbPassword.Text + "'", con);
             NpgsqlDataReader dr = cmd.ExecuteReader();

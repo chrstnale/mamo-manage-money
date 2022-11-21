@@ -82,5 +82,10 @@ namespace Front_End
         {
 
         }
+
+        private void form_Transaksi1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

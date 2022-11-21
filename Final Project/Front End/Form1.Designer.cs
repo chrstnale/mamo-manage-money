@@ -191,6 +191,7 @@ namespace Front_End
             this.form_Transaksi1.Name = "form_Transaksi1";
             this.form_Transaksi1.Size = new System.Drawing.Size(1036, 633);
             this.form_Transaksi1.TabIndex = 2;
+            this.form_Transaksi1.Load += new System.EventHandler(this.form_Transaksi1_Load);
             // 
             // form_Home1
             // 

@@ -33,7 +33,6 @@ namespace Front_End
 
         private void btnAddTransBaru_Click(object sender, EventArgs e)
         {
-
             try
             {
                 conn.Open();
@@ -43,13 +42,16 @@ namespace Front_End
                     cmd.Parameters.AddWithValue("_type", "Pendapatan");
                 else if(rbPengeluaran.Checked)
                     cmd.Parameters.AddWithValue("_type", "Pengeluaran");
-                cmd.Parameters.AddWithValue("_nominal", float.Parse(tbNominalTrans.Text, CultureInfo.InvariantCulture.NumberFormat));
+                float nominal = float.Parse(tbNominalTrans.Text, CultureInfo.InvariantCulture.NumberFormat);
+                cmd.Parameters.AddWithValue("_nominal", nominal);
+                double nominalBudget = Convert.ToDouble(cmd.ExecuteScalar());
+                nominalBudget += nominal;
                 cmd.Parameters.AddWithValue("_category", cbKategoriTrans.Text);
                 cmd.Parameters.AddWithValue("_notes", tbNoteTrans.Text);
                 cmd.Parameters.AddWithValue("_date", dateTimePicker1.Text);
                 cmd.Parameters.AddWithValue("_source", cbSumberTrans.Text);
-
-
+                sql = string.Format("select nominal from tb_budget where category={0}", cbKategoriTrans.Text);
+                sql = string.Format("update tb_budget set nominal = nominal + {0} where category={1}", nominal, cbKategoriTrans.Text);
                 if ((int)cmd.ExecuteScalar() == 1)
                 {
                     MessageBox.Show("Data Transaksi Berhasil Masuk!", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
