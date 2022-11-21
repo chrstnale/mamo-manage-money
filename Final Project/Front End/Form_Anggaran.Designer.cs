@@ -43,22 +43,24 @@ namespace Front_End
             // panel2
             // 
             this.panel2.Controls.Add(this.btnRefreshBudget);
-            this.panel2.Location = new System.Drawing.Point(178, 72);
+            this.panel2.Location = new System.Drawing.Point(174, 72);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(145, 42);
+            this.panel2.Size = new System.Drawing.Size(138, 42);
             this.panel2.TabIndex = 7;
             // 
             // btnRefreshBudget
             // 
             this.btnRefreshBudget.BackColor = System.Drawing.Color.White;
+            this.btnRefreshBudget.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefreshBudget.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnRefreshBudget.ForeColor = System.Drawing.Color.DimGray;
-            this.btnRefreshBudget.Location = new System.Drawing.Point(-15, -8);
+            this.btnRefreshBudget.Location = new System.Drawing.Point(-12, -11);
             this.btnRefreshBudget.Name = "btnRefreshBudget";
-            this.btnRefreshBudget.Size = new System.Drawing.Size(176, 59);
+            this.btnRefreshBudget.Size = new System.Drawing.Size(155, 59);
             this.btnRefreshBudget.TabIndex = 5;
             this.btnRefreshBudget.Text = "Refresh";
             this.btnRefreshBudget.UseVisualStyleBackColor = false;
+            this.btnRefreshBudget.Click += new System.EventHandler(this.btnRefreshBudget_Click);
             // 
             // panel1
             // 
@@ -71,6 +73,7 @@ namespace Front_End
             // btnAddBudget
             // 
             this.btnAddBudget.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnAddBudget.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddBudget.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAddBudget.ForeColor = System.Drawing.Color.White;
             this.btnAddBudget.Location = new System.Drawing.Point(-15, -8);

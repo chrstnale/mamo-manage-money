@@ -16,5 +16,10 @@ namespace Front_End
         {
             InitializeComponent();
         }
+
+        private void btnRefreshBudget_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

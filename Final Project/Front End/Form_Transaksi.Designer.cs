@@ -72,6 +72,7 @@ namespace Front_End
             // btnAddTrans
             // 
             this.btnAddTrans.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnAddTrans.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddTrans.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAddTrans.ForeColor = System.Drawing.Color.White;
             this.btnAddTrans.Location = new System.Drawing.Point(-15, -8);
@@ -93,6 +94,7 @@ namespace Front_End
             // btnRefreshTrans
             // 
             this.btnRefreshTrans.BackColor = System.Drawing.Color.White;
+            this.btnRefreshTrans.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefreshTrans.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnRefreshTrans.ForeColor = System.Drawing.Color.DimGray;
             this.btnRefreshTrans.Location = new System.Drawing.Point(-21, -11);

@@ -63,6 +63,26 @@ namespace Front_End.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Finance_app_Flatline {
+            get {
+                object obj = ResourceManager.GetObject("Finance app_Flatline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home {
+            get {
+                object obj = ResourceManager.GetObject("home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mamo3 {
             get {
                 object obj = ResourceManager.GetObject("mamo3", resourceCulture);
@@ -86,6 +106,76 @@ namespace Front_End.Properties {
         internal static System.Drawing.Bitmap menu__1_ {
             get {
                 object obj = ResourceManager.GetObject("menu (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap money__3_ {
+            get {
+                object obj = ResourceManager.GetObject("money (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pie_chart__2_ {
+            get {
+                object obj = ResourceManager.GetObject("pie-chart (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transfer__2_ {
+            get {
+                object obj = ResourceManager.GetObject("transfer (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wallet_filled_money_tool {
+            get {
+                object obj = ResourceManager.GetObject("wallet-filled-money-tool", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wallet_filled_money_tool__1_ {
+            get {
+                object obj = ResourceManager.GetObject("wallet-filled-money-tool (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wallet_filled_money_tool__2_ {
+            get {
+                object obj = ResourceManager.GetObject("wallet-filled-money-tool (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wallet_filled_money_tool__3_ {
+            get {
+                object obj = ResourceManager.GetObject("wallet-filled-money-tool (3)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

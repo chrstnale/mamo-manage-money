@@ -15,9 +15,15 @@ namespace Front_End
         public Form_Home()
         {
             InitializeComponent();
+            lblDeskripsi.BackColor = Color.Transparent;
         }
 
         private void lblHomePage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form_Home_Load(object sender, EventArgs e)
         {
 
         }

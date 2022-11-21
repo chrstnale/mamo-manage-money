@@ -29,6 +29,7 @@ namespace Front_End
 
         private void btnTransaksi_Click(object sender, EventArgs e)
         {
+            form_Home1.Visible = false;
             form_Transaksi1.Visible = true;
             form_Anggaran1.Visible = false;
             if (btnTransaksi.Focused == true)
@@ -41,6 +42,7 @@ namespace Front_End
 
         private void btnAnggaran_Click(object sender, EventArgs e)
         {
+            form_Home1.Visible =false;
             form_Transaksi1.Visible = false;
             form_Anggaran1.Visible = true;
             if (btnAnggaran.Focused == true)
@@ -53,12 +55,32 @@ namespace Front_End
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            form_Home1.Visible = true;
+            form_Transaksi1.Visible = false;
+            form_Anggaran1.Visible = false;
             if (btnHome.Focused == true)
             {
                 btnHome.BackColor = Color.DarkGreen;
                 btnTransaksi.BackColor = panel1.BackColor;
                 btnAnggaran.BackColor = panel1.BackColor;
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            btnHome.BackColor = Color.DarkGreen;
+            btnTransaksi.BackColor = panel1.BackColor;
+            btnAnggaran.BackColor = panel1.BackColor;
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void form_Home1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
