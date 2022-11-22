@@ -25,6 +25,7 @@ namespace Front_End
         public DataTable dt;
         public static NpgsqlCommand cmd;
         private string sql = null;
+        private DataGridViewRow r;
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -38,15 +39,7 @@ namespace Front_End
 
         private void btnRefreshTrans_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            dgvTransaction.DataSource = null;
-            sql = "select * from transactions_select()";
-            cmd = new NpgsqlCommand(sql, conn);
-            dt = new DataTable();
-            NpgsqlDataReader rd = cmd.ExecuteReader();
-            dt.Load(rd);
-            dgvTransaction.DataSource = dt;
-            conn.Close();
+            
         }
 
         private void btnAddTrans_Click(object sender, EventArgs e)
@@ -59,6 +52,46 @@ namespace Front_End
         {
             Tambah_Transaksi editTrans = new Tambah_Transaksi();
             editTrans.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            dgvTransaction.DataSource = null;
+            sql = "select * from transactions_select()";
+            cmd = new NpgsqlCommand(sql, conn);
+            dt = new DataTable();
+            NpgsqlDataReader rd = cmd.ExecuteReader();
+            dt.Load(rd);
+            dgvTransaction.DataSource = dt;
+            conn.Close();
+        }
+
+        private void btnEditTrans_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeleteTrans_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            dgvTransaction.DataSource = null;
+            sql = "select * from transactions_delete(:_id)";
+            cmd = new NpgsqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("_id", r.Cells["_id"].Value.ToString());
+            dt = new DataTable();
+            NpgsqlDataReader rd = cmd.ExecuteReader();
+            dt.Load(rd);
+            dgvTransaction.DataSource = dt;
+            conn.Close();
+        }
+
+        private void dgvTransaction_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                r = dgvTransaction.Rows[e.RowIndex];
+            }
         }
     }
 }
