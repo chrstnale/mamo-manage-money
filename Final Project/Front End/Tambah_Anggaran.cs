@@ -36,22 +36,33 @@ namespace Front_End
         {
             try
             {
+                var date= DateTime.Now;
+                var datewotime = date.Date;
+                var dateoneweek = datewotime.AddDays(6);
+                var dateonemonth = datewotime.AddMonths(1);
+                var dateoneyear = datewotime.AddYears(1);
                 conn.Open();
-                sql = @"select * from budget_insert(:_category,:_nominal,:_tanggalAwal,:_tanggalAkhir);";
+                sql = @"select * from budget_insert(:_category,:_nominal,:_tanggalawal,:_tanggalakhir);";
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("_category", cbKategoriBudget.Text);
                 cmd.Parameters.AddWithValue("_nominal", float.Parse(tbNominalBudget.Text, CultureInfo.InvariantCulture.NumberFormat));
                 if (cbOpsiBudget.Text == "Mingguan")
                 {
-                    sql = @"insert into tb_budget(_tanggalAwal,_tanggalAkhir) values (date_trunc('week', current_date), date_trunc('week', current_date) + interval '1 WEEK' - interval '1 DAY');";
+                    cmd.Parameters.AddWithValue("_tanggalawal", datewotime.ToString("dd/MM/yyyy"));
+                    cmd.Parameters.AddWithValue("_tanggalakhir", dateoneweek.ToString("dd/MM/yyyy"));
+                    //sql = @"insert into tb_budget(_tanggalawal,_tanggalakhir) values (date_trunc('week', current_date), date_trunc('week', current_date) + interval '1 WEEK' - interval '1 DAY');";
                 }
                 else if (cbOpsiBudget.Text == "Bulanan")
                 {
-                    sql = @"insert into tb_budget (_tanggalAwal, _tanggalAkhir) values (date_trunc('month',  current_date), date_trunc('month', current_date) + interval '1 MONTH' - interval '1 DAY');";
+                    cmd.Parameters.AddWithValue("_tanggalawal", datewotime.ToString("dd/MM/yyyy"));
+                    cmd.Parameters.AddWithValue("_tanggalakhir", dateonemonth.ToString("dd/MM/yyyy"));
+                    //sql = @"insert into tb_budget (_tanggalawal, _tanggalakhir) values (date_trunc('month',  current_date), date_trunc('month', current_date) + interval '1 MONTH' - interval '1 DAY');";
                 }
                 else if (cbOpsiBudget.Text == "Tahunan")
                 {
-                    sql = @"insert into tb_budget (_tanggalAwal, _tanggalAkhir) values (date_trunc('year',  current_date), date_trunc('year', current_date) + interval '1 YEAR' - interval '1 DAY');";
+                    cmd.Parameters.AddWithValue("_tanggalawal", datewotime.ToString("dd/MM/yyyy"));
+                    cmd.Parameters.AddWithValue("_tanggalakhir", dateoneyear.ToString("dd/MM/yyyy"));
+                    //sql = @"insert into tb_budget (_tanggalawal, _tanggalakhir) values (date_trunc('year',  current_date), date_trunc('year', current_date) + interval '1 YEAR' - interval '1 DAY');";
                 }
                     
                 if ((int)cmd.ExecuteScalar() == 1)

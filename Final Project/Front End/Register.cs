@@ -28,7 +28,7 @@ namespace Front_End
 
         //Login login = new Login();
         private NpgsqlConnection conn;
-        string connstring = "Host=localhost;Port=4321;Username=postgres;Password=A15p12D15;Database=mamo;";
+        string connstring = "Host=localhost;Port=2022;Username=postgres;Password=informatika;Database=mamodb;";
         public DataTable dt;
         public static NpgsqlCommand cmd;
         private string sql = null;
@@ -51,12 +51,12 @@ namespace Front_End
         {
             try {
             conn.Open();
-            sql = @"select * from user_insert(:_name,:_email,:_password)";
+            sql = @"select * from user_insert(:_name,:_email,:_passsword)";
             cmd = new NpgsqlCommand(sql, conn);
 
             cmd.Parameters.AddWithValue("_name", tbNama.Text);
             cmd.Parameters.AddWithValue("_email", tbEmail.Text);
-            cmd.Parameters.AddWithValue("_password", tbPassword.Text);
+            cmd.Parameters.AddWithValue("_passsword", tbPassword.Text);
             if ((int)cmd.ExecuteScalar() == 1)
             {
                 MessageBox.Show("Selamat Datang " + tbNama.Text + "!", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -298,6 +298,11 @@ namespace Front_End
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbGoogle_TextChanged(object sender, EventArgs e)
         {
 
         }
