@@ -110,6 +110,7 @@ namespace Front_End
             this.dgvBudget.RowTemplate.Height = 29;
             this.dgvBudget.Size = new System.Drawing.Size(999, 486);
             this.dgvBudget.TabIndex = 4;
+            this.dgvBudget.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBudget_CellClick);
             // 
             // panel3
             // 
@@ -152,6 +153,7 @@ namespace Front_End
             this.btnDeleteBudget.TabIndex = 5;
             this.btnDeleteBudget.Text = "Delete";
             this.btnDeleteBudget.UseVisualStyleBackColor = false;
+            this.btnDeleteBudget.Click += new System.EventHandler(this.btnDeleteBudget_Click);
             // 
             // Form_Anggaran
             // 

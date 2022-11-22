@@ -25,6 +25,7 @@ namespace Front_End
         public DataTable dt;
         public static NpgsqlCommand cmd;
         private string sql = null;
+        private DataGridViewRow r;
 
         private void btnRefreshBudget_Click(object sender, EventArgs e)
         {
@@ -48,6 +49,29 @@ namespace Front_End
         private void Form_Anggaran_Load(object sender, EventArgs e)
         {
             conn = new NpgsqlConnection(connstring);
+        }
+
+        private void btnDeleteBudget_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            dgvBudget.DataSource = null;
+            sql = "select * from budget_delete(:_id_budget)";
+            cmd = new NpgsqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("_id_budget", r.Cells["_id_budget"].Value.ToString());
+            dt = new DataTable();
+            NpgsqlDataReader rd = cmd.ExecuteReader();
+            dt.Load(rd);
+            dgvBudget.DataSource = dt;
+            conn.Close();
+        }
+
+        private void dgvBudget_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex >= 0)
+            {
+                r = dgvBudget.Rows[e.RowIndex];
+
+            }
         }
     }
 }
