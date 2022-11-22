@@ -232,6 +232,7 @@ namespace Front_End
             // btnAddTransBaru
             // 
             this.btnAddTransBaru.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnAddTransBaru.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddTransBaru.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAddTransBaru.ForeColor = System.Drawing.Color.White;
             this.btnAddTransBaru.Location = new System.Drawing.Point(-15, -8);

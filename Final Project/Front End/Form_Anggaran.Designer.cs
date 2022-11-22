@@ -35,9 +35,15 @@ namespace Front_End
             this.btnAddBudget = new System.Windows.Forms.Button();
             this.lblDataTrans = new System.Windows.Forms.Label();
             this.dgvBudget = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnEditBudget = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnDeleteBudget = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBudget)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -105,11 +111,55 @@ namespace Front_End
             this.dgvBudget.Size = new System.Drawing.Size(999, 486);
             this.dgvBudget.TabIndex = 4;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnEditBudget);
+            this.panel3.Location = new System.Drawing.Point(323, 72);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(138, 42);
+            this.panel3.TabIndex = 8;
+            // 
+            // btnEditBudget
+            // 
+            this.btnEditBudget.BackColor = System.Drawing.Color.White;
+            this.btnEditBudget.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditBudget.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEditBudget.ForeColor = System.Drawing.Color.DimGray;
+            this.btnEditBudget.Location = new System.Drawing.Point(-12, -11);
+            this.btnEditBudget.Name = "btnEditBudget";
+            this.btnEditBudget.Size = new System.Drawing.Size(155, 59);
+            this.btnEditBudget.TabIndex = 5;
+            this.btnEditBudget.Text = "Edit";
+            this.btnEditBudget.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnDeleteBudget);
+            this.panel4.Location = new System.Drawing.Point(472, 72);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(138, 42);
+            this.panel4.TabIndex = 9;
+            // 
+            // btnDeleteBudget
+            // 
+            this.btnDeleteBudget.BackColor = System.Drawing.Color.White;
+            this.btnDeleteBudget.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteBudget.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDeleteBudget.ForeColor = System.Drawing.Color.DimGray;
+            this.btnDeleteBudget.Location = new System.Drawing.Point(-12, -11);
+            this.btnDeleteBudget.Name = "btnDeleteBudget";
+            this.btnDeleteBudget.Size = new System.Drawing.Size(155, 59);
+            this.btnDeleteBudget.TabIndex = 5;
+            this.btnDeleteBudget.Text = "Delete";
+            this.btnDeleteBudget.UseVisualStyleBackColor = false;
+            // 
             // Form_Anggaran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblDataTrans);
@@ -120,6 +170,8 @@ namespace Front_End
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBudget)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,5 +185,9 @@ namespace Front_End
         private System.Windows.Forms.Button btnAddBudget;
         private System.Windows.Forms.Label lblDataTrans;
         private System.Windows.Forms.DataGridView dgvBudget;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnEditBudget;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnDeleteBudget;
     }
 }
