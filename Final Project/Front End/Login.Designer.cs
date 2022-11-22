@@ -217,6 +217,7 @@ namespace Front_End
             this.tbGoogle.Size = new System.Drawing.Size(270, 127);
             this.tbGoogle.TabIndex = 19;
             this.tbGoogle.Text = "";
+            this.tbGoogle.Visible = false;
             // 
             // Login
             // 

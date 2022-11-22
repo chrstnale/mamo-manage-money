@@ -57,6 +57,7 @@ namespace Front_End
             this.dgvTransaction.RowTemplate.Height = 29;
             this.dgvTransaction.Size = new System.Drawing.Size(999, 486);
             this.dgvTransaction.TabIndex = 0;
+            this.dgvTransaction.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellClick);
             // 
             // lblDataTrans
             // 
@@ -111,6 +112,7 @@ namespace Front_End
             this.button1.TabIndex = 6;
             this.button1.Text = "Refresh";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnRefreshTrans
             // 
@@ -146,6 +148,7 @@ namespace Front_End
             this.btnEditTrans.TabIndex = 5;
             this.btnEditTrans.Text = "Edit";
             this.btnEditTrans.UseVisualStyleBackColor = false;
+            this.btnEditTrans.Click += new System.EventHandler(this.btnEditTrans_Click);
             // 
             // panel4
             // 
@@ -167,6 +170,7 @@ namespace Front_End
             this.btnDeleteTrans.TabIndex = 5;
             this.btnDeleteTrans.Text = "Delete";
             this.btnDeleteTrans.UseVisualStyleBackColor = false;
+            this.btnDeleteTrans.Click += new System.EventHandler(this.btnDeleteTrans_Click);
             // 
             // Form_Transaksi
             // 
